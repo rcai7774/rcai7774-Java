@@ -1,6 +1,8 @@
+import java.util.*;
 public class Codec {
 
     // Encodes a URL to a shortened URL.
+    HashMap<String, String> bla = new HashMap<String, String>();
     public String encode(String longUrl) {
         String map = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         String token = "";
@@ -9,12 +11,17 @@ public class Codec {
        token += map.charAt((num));
         };
         String sUrl = "http://tinyurl.com/" + token;
+        bla.put(sUrl, longUrl);
         return sUrl;
     
     }
 
     // Decodes a shortened URL to its original URL.
     public String decode(String shortUrl) {
-        return "test2";
+        return bla.get(shortUrl);
     }
 }
+
+// Your Codec object will be instantiated and called as such:
+// Codec codec = new Codec();
+// codec.decode(codec.encode(url));
