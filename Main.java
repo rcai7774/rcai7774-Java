@@ -18,5 +18,7 @@ class Main {
 		for(int i = 1; i < 1025; i++){
 			System.out.println("" + i + ": " + p.binaryPower(i));
 		}
+		Codec c = new Codec();
+		System.out.println(c.encode("https://leetcode.com/problems/design-tinyurl"));
   }
 }
