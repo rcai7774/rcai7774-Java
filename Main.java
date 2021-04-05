@@ -1,4 +1,6 @@
-import java.util.*;
+import challenges.*;
+import leetcode.*;
+import dupe.*;
 class Main {
   public static void main(String[] args) {
     System.out.println("Hello world!");
@@ -11,15 +13,15 @@ class Main {
 		//Parent p = new Parent();
 		//p.m1();
 		//p.m2();
-		DivisibleByTwo t = new DivisibleByTwo();
 		for(int i = 1; i < 1001; i++){
-			System.out.println("" + i + ": " + t.divisi(i));
+			System.out.println("" + i + ": " + DivisibleByTwo.divisi(i));
 		}
-		BinaryPower p = new BinaryPower();
 		for(int i = 1; i < 1025; i++){
-			System.out.println("" + i + ": " + p.binaryPower(i));
+			System.out.println("" + i + ": " + BinaryPower.binaryPower(i));
 		}
 		Codec c = new Codec();
-		System.out.println(c.encode("https://leetcode.com/problems/design-tinyurl"));
+        System.out.println(c.encode("https://leetcode.com/problems/design-tinyurl"));
+        int[] nums = {1,2,3,4,5,6,7,8,9,10,1};
+        System.out.println(Duplicates.containsDupes(nums));
   }
 }
