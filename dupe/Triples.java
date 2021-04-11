@@ -6,7 +6,7 @@ public class Triples {
         System.out.println(Triples.findSingle(nums));
     } 
     public static int findSingle(int[] nums){
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
         int answer = 0;
         for(int i = 0; i < nums.length; i++){
             if(list.get(nums[i])!= null){
